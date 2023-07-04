@@ -1,0 +1,89 @@
+{
+  "version": 3,
+  "targets": {
+    "net7.0": {
+      "fat.management.infrastructure.crossctutting/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/fat.management.infrastructure.crossctutting.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/fat.management.infrastructure.crossctutting.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "fat.management.infrastructure.crossctutting/1.0.0": {
+      "type": "project",
+      "path": "../Infrastructure.Crosscutting/fat.management.infrastructure.crossctutting.csproj",
+      "msbuildProject": "../Infrastructure.Crosscutting/fat.management.infrastructure.crossctutting.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net7.0": [
+      "fat.management.infrastructure.crossctutting >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "/home/saulo/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/home/saulo/dev/fat.management.api/Domain/fat.management.domain.csproj",
+      "projectName": "fat.management.domain",
+      "projectPath": "/home/saulo/dev/fat.management.api/Domain/fat.management.domain.csproj",
+      "packagesPath": "/home/saulo/.nuget/packages/",
+      "outputPath": "/home/saulo/dev/fat.management.api/Domain/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/home/saulo/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net7.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "projectReferences": {
+            "/home/saulo/dev/fat.management.api/Infrastructure.Crosscutting/fat.management.infrastructure.crossctutting.csproj": {
+              "projectPath": "/home/saulo/dev/fat.management.api/Infrastructure.Crosscutting/fat.management.infrastructure.crossctutting.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net7.0": {
+        "targetAlias": "net7.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.108/RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "fat.management.domain/1.0.0": {
+        "runtime": {
+          "fat.management.domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "fat.management.domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

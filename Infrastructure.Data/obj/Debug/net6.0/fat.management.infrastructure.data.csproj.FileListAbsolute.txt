@@ -1,0 +1,12 @@
+/home/saulo/dev/fat.management.api/Infrastructure.Data/bin/Debug/net6.0/fat.management.infrastructure.data.deps.json
+/home/saulo/dev/fat.management.api/Infrastructure.Data/bin/Debug/net6.0/fat.management.infrastructure.data.dll
+/home/saulo/dev/fat.management.api/Infrastructure.Data/bin/Debug/net6.0/fat.management.infrastructure.data.pdb
+/home/saulo/dev/fat.management.api/Infrastructure.Data/obj/Debug/net6.0/fat.management.infrastructure.data.csproj.AssemblyReference.cache
+/home/saulo/dev/fat.management.api/Infrastructure.Data/obj/Debug/net6.0/fat.management.infrastructure.data.GeneratedMSBuildEditorConfig.editorconfig
+/home/saulo/dev/fat.management.api/Infrastructure.Data/obj/Debug/net6.0/fat.management.infrastructure.data.AssemblyInfoInputs.cache
+/home/saulo/dev/fat.management.api/Infrastructure.Data/obj/Debug/net6.0/fat.management.infrastructure.data.AssemblyInfo.cs
+/home/saulo/dev/fat.management.api/Infrastructure.Data/obj/Debug/net6.0/fat.management.infrastructure.data.csproj.CoreCompileInputs.cache
+/home/saulo/dev/fat.management.api/Infrastructure.Data/obj/Debug/net6.0/fat.management.infrastructure.data.dll
+/home/saulo/dev/fat.management.api/Infrastructure.Data/obj/Debug/net6.0/refint/fat.management.infrastructure.data.dll
+/home/saulo/dev/fat.management.api/Infrastructure.Data/obj/Debug/net6.0/fat.management.infrastructure.data.pdb
+/home/saulo/dev/fat.management.api/Infrastructure.Data/obj/Debug/net6.0/ref/fat.management.infrastructure.data.dll

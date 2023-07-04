@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "fat.management.domain/1.0.0": {
+        "dependencies": {
+          "fat.management.infrastructure.crossctutting": "1.0.0"
+        },
+        "runtime": {
+          "fat.management.domain.dll": {}
+        }
+      },
+      "fat.management.infrastructure.crossctutting/1.0.0": {
+        "runtime": {
+          "fat.management.infrastructure.crossctutting.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "fat.management.domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "fat.management.infrastructure.crossctutting/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

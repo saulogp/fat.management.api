@@ -1,0 +1,262 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/saulo/dev/fat.management.api/Presentation/fat.management.api.csproj": {}
+  },
+  "projects": {
+    "/home/saulo/dev/fat.management.api/Domain/fat.management.domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/saulo/dev/fat.management.api/Domain/fat.management.domain.csproj",
+        "projectName": "fat.management.domain",
+        "projectPath": "/home/saulo/dev/fat.management.api/Domain/fat.management.domain.csproj",
+        "packagesPath": "/home/saulo/.nuget/packages/",
+        "outputPath": "/home/saulo/dev/fat.management.api/Domain/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/saulo/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/home/saulo/dev/fat.management.api/Infrastructure.Crosscutting/fat.management.infrastructure.crossctutting.csproj": {
+                "projectPath": "/home/saulo/dev/fat.management.api/Infrastructure.Crosscutting/fat.management.infrastructure.crossctutting.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.108/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/saulo/dev/fat.management.api/Infrastructure.Crosscutting/fat.management.infrastructure.crossctutting.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/saulo/dev/fat.management.api/Infrastructure.Crosscutting/fat.management.infrastructure.crossctutting.csproj",
+        "projectName": "fat.management.infrastructure.crossctutting",
+        "projectPath": "/home/saulo/dev/fat.management.api/Infrastructure.Crosscutting/fat.management.infrastructure.crossctutting.csproj",
+        "packagesPath": "/home/saulo/.nuget/packages/",
+        "outputPath": "/home/saulo/dev/fat.management.api/Infrastructure.Crosscutting/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/saulo/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.108/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/saulo/dev/fat.management.api/Infrastructure.Data/fat.management.infrastructure.data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/saulo/dev/fat.management.api/Infrastructure.Data/fat.management.infrastructure.data.csproj",
+        "projectName": "fat.management.infrastructure.data",
+        "projectPath": "/home/saulo/dev/fat.management.api/Infrastructure.Data/fat.management.infrastructure.data.csproj",
+        "packagesPath": "/home/saulo/.nuget/packages/",
+        "outputPath": "/home/saulo/dev/fat.management.api/Infrastructure.Data/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/saulo/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/home/saulo/dev/fat.management.api/Infrastructure.Crosscutting/fat.management.infrastructure.crossctutting.csproj": {
+                "projectPath": "/home/saulo/dev/fat.management.api/Infrastructure.Crosscutting/fat.management.infrastructure.crossctutting.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.Extensions.Options": {
+              "target": "Package",
+              "version": "[7.0.1, )"
+            },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.20.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.108/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/saulo/dev/fat.management.api/Presentation/fat.management.api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/saulo/dev/fat.management.api/Presentation/fat.management.api.csproj",
+        "projectName": "fat.management.api",
+        "projectPath": "/home/saulo/dev/fat.management.api/Presentation/fat.management.api.csproj",
+        "packagesPath": "/home/saulo/.nuget/packages/",
+        "outputPath": "/home/saulo/dev/fat.management.api/Presentation/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/saulo/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/home/saulo/dev/fat.management.api/Domain/fat.management.domain.csproj": {
+                "projectPath": "/home/saulo/dev/fat.management.api/Domain/fat.management.domain.csproj"
+              },
+              "/home/saulo/dev/fat.management.api/Infrastructure.Data/fat.management.infrastructure.data.csproj": {
+                "projectPath": "/home/saulo/dev/fat.management.api/Infrastructure.Data/fat.management.infrastructure.data.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[6.16.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.5.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.16.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.108/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "swOW66EPMyGwCvfqeBAZ0UyPSGgmtN+zLiMmF6X0bfs=",
+  "Source": "fat.management.api",
+  "BasePath": "_content/fat.management.api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

@@ -1,0 +1,15 @@
+/home/saulo/dev/fat.management.api/Domain/bin/Debug/net7.0/fat.management.domain.deps.json
+/home/saulo/dev/fat.management.api/Domain/bin/Debug/net7.0/fat.management.domain.dll
+/home/saulo/dev/fat.management.api/Domain/bin/Debug/net7.0/fat.management.domain.pdb
+/home/saulo/dev/fat.management.api/Domain/obj/Debug/net7.0/fat.management.domain.csproj.AssemblyReference.cache
+/home/saulo/dev/fat.management.api/Domain/obj/Debug/net7.0/fat.management.domain.GeneratedMSBuildEditorConfig.editorconfig
+/home/saulo/dev/fat.management.api/Domain/obj/Debug/net7.0/fat.management.domain.AssemblyInfoInputs.cache
+/home/saulo/dev/fat.management.api/Domain/obj/Debug/net7.0/fat.management.domain.AssemblyInfo.cs
+/home/saulo/dev/fat.management.api/Domain/obj/Debug/net7.0/fat.management.domain.csproj.CoreCompileInputs.cache
+/home/saulo/dev/fat.management.api/Domain/obj/Debug/net7.0/fat.management.domain.dll
+/home/saulo/dev/fat.management.api/Domain/obj/Debug/net7.0/refint/fat.management.domain.dll
+/home/saulo/dev/fat.management.api/Domain/obj/Debug/net7.0/fat.management.domain.pdb
+/home/saulo/dev/fat.management.api/Domain/obj/Debug/net7.0/ref/fat.management.domain.dll
+/home/saulo/dev/fat.management.api/Domain/bin/Debug/net7.0/fat.management.infrastructure.crossctutting.dll
+/home/saulo/dev/fat.management.api/Domain/bin/Debug/net7.0/fat.management.infrastructure.crossctutting.pdb
+/home/saulo/dev/fat.management.api/Domain/obj/Debug/net7.0/fat.management.domain.csproj.CopyComplete

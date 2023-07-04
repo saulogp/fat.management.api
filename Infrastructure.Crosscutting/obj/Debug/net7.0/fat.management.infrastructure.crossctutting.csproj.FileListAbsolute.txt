@@ -1,0 +1,12 @@
+/home/saulo/dev/fat.management.api/Infrastructure.Crosscutting/bin/Debug/net7.0/fat.management.infrastructure.crossctutting.deps.json
+/home/saulo/dev/fat.management.api/Infrastructure.Crosscutting/bin/Debug/net7.0/fat.management.infrastructure.crossctutting.dll
+/home/saulo/dev/fat.management.api/Infrastructure.Crosscutting/bin/Debug/net7.0/fat.management.infrastructure.crossctutting.pdb
+/home/saulo/dev/fat.management.api/Infrastructure.Crosscutting/obj/Debug/net7.0/fat.management.infrastructure.crossctutting.csproj.AssemblyReference.cache
+/home/saulo/dev/fat.management.api/Infrastructure.Crosscutting/obj/Debug/net7.0/fat.management.infrastructure.crossctutting.GeneratedMSBuildEditorConfig.editorconfig
+/home/saulo/dev/fat.management.api/Infrastructure.Crosscutting/obj/Debug/net7.0/fat.management.infrastructure.crossctutting.AssemblyInfoInputs.cache
+/home/saulo/dev/fat.management.api/Infrastructure.Crosscutting/obj/Debug/net7.0/fat.management.infrastructure.crossctutting.AssemblyInfo.cs
+/home/saulo/dev/fat.management.api/Infrastructure.Crosscutting/obj/Debug/net7.0/fat.management.infrastructure.crossctutting.csproj.CoreCompileInputs.cache
+/home/saulo/dev/fat.management.api/Infrastructure.Crosscutting/obj/Debug/net7.0/fat.management.infrastructure.crossctutting.dll
+/home/saulo/dev/fat.management.api/Infrastructure.Crosscutting/obj/Debug/net7.0/refint/fat.management.infrastructure.crossctutting.dll
+/home/saulo/dev/fat.management.api/Infrastructure.Crosscutting/obj/Debug/net7.0/fat.management.infrastructure.crossctutting.pdb
+/home/saulo/dev/fat.management.api/Infrastructure.Crosscutting/obj/Debug/net7.0/ref/fat.management.infrastructure.crossctutting.dll
