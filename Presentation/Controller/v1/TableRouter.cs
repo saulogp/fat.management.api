@@ -9,7 +9,7 @@ namespace Presentation.Controller
     {
         public static void ConfigureTableRouter(this WebApplication app)
         {
-            var tableGroup = app.MapGroup("api/v1");
+            var tableGroup = app.MapGroup("api/v1").RequireAuthorization();
             tableGroup.MapGet("table", GetTableByCategory);// implementar paginação
             tableGroup.MapGet("table/{id}", GetTableById);
             tableGroup.MapGet("table/user/{id}", GetTablesByUsersId);
