@@ -8,7 +8,7 @@ namespace Presentation.Controller
     {
         public static void ConfigureUserProfileRouter(this WebApplication app)
         {
-            var userGroup = app.MapGroup("api/v1");
+            var userGroup = app.MapGroup("api/v1").RequireAuthorization();
             userGroup.MapGet("user/{id}", GetUserById);
             userGroup.MapPut("user/{id}", UpdateUserById);
             userGroup.MapDelete("user/{id}", DeleteUserById);
