@@ -316,7 +316,7 @@ Explain how other developers can contribute to your project. Include instruction
 
 ## License
 
-Specify the license under which your API is published.
+This API is published under the MIT License. See the LICENSE file for more details.
 
 ## Contact
 
