@@ -5,10 +5,11 @@ using Infrastructure.Data.Repository;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
-using Presentation.Controller;
+using Presentation.Routers;
 
 var builder = WebApplication.CreateBuilder(args);
 
+#region SwaggerConfiguration
 var securityScheme = new OpenApiSecurityScheme()
 {
     Name = "Authorization",
@@ -68,6 +69,7 @@ builder.Services.AddAuthentication(o =>
         ClockSkew = TimeSpan.Zero
     };
 });
+#endregion
 
 builder.Services.AddAuthorization();
 builder.Services.AddEndpointsApiExplorer();

@@ -1,6 +1,6 @@
 namespace Domain.Model.Authentication
 {
-    public class UserUpdatePasswordModel
+    public class UserChangePasswordModel
     {
         public string Email { get; set; } = string.Empty;
         public string Password { get; set; } = string.Empty;
