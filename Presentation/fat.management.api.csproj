@@ -16,6 +16,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Domain\fat.management.domain.csproj" />
     <ProjectReference Include="..\Infrastructure.Data\fat.management.infrastructure.data.csproj" />
+    <ProjectReference Include="..\Infrastructure.Crosscutting\fat.management.infrastructure.crossctutting.csproj" />
   </ItemGroup>
 
 </Project>

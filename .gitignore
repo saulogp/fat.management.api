@@ -19,6 +19,7 @@ packages/
 *.suo
 *.cache
 *.sln.docstates
+*.vscode
 
 # Archivos de registro
 *.log
