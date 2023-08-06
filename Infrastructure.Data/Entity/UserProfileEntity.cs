@@ -19,5 +19,7 @@ namespace Infrastructure.Data.Entity
         public byte[]? PasswordSalt { get; set; }
         public DateTime CreatedDate { get; set; }
         public DateTime LastUpdatedDate { get; set; }
+        public bool IsEmailConfirmed { get; set; }
+        public string EmailConfirmationCode { get; set; } = string.Empty;
     }
 }

@@ -1,7 +1,6 @@
 using Domain.Model.Table;
 using Infrastructure.Data.Entity;
 using Infrastructure.Data.Interface;
-using Microsoft.AspNetCore.Mvc;
 
 namespace Presentation.Routers
 {
@@ -10,11 +9,10 @@ namespace Presentation.Routers
         public static void ConfigureTableRouter(this WebApplication app)
         {
             var group = app.MapGroup("api/v1").RequireAuthorization();
-            group.MapGet("/table", GetTablesCategories);// implementar paginação
             group.MapGet("/table/{id}", GetTable);
             group.MapGet("/table/user/{id}", GetTablesByUsers);
             group.MapPut("/table/{id}", UpdateTable);
-            group.MapPost("/table/", CreateTable);
+            group.MapPost("/table", CreateTable);
             group.MapPost("/table/{tableId}/user/{userId}/join", JoinTable);
             group.MapPost("/table/{tableId}/user/{userId}/leave", LeaveTable);
             group.MapDelete("/table/{id}", DeleteTable);
@@ -51,17 +49,48 @@ namespace Presentation.Routers
             }
         }
 
-        private static IResult GetTablesCategories([FromQuery] string[] filters) => throw new NotImplementedException();
-
-        private static async Task<IResult> GetTable(Guid id, ITableRepository repository)
+        private static async Task<IResult> GetTable(Guid id, ITableRepository tableRepository, IUserProfileRepository userRepository)
         {
             try
             {
-                var table = await repository.GetTableAsync(id);
+                var table = await tableRepository.GetTableAsync(id);
 
                 if (table is null) return Results.BadRequest("Table not found");
 
-                return Results.Ok(table);
+                var response = new TableResponseModel
+                {
+                    Title = table.Title,
+                    Description = table.Description,
+                    Genres = table.Genres,
+                    ImgUrl = table.ImgUrl,
+                    SystemGame = table.SystemGame,
+                    Platform = table.Platform,
+                    MaxPlayers = table.MaxPlayers,
+                    Active = table.Active,
+                    CreatedDate = table.CreatedDate,
+                    LastUpdatedDate = table.LastUpdatedDate,
+                    Participants = new List<Participant>()
+                };
+
+                var user = await userRepository.GetUserAsync(table.Owner);
+                response.Owner = new Participant{
+                    Email = user.Email,
+                    ImgUrl = user.ImgUrl,
+                    UserName = user.UserName
+                };
+
+                if (table.Participants.Any()){
+                    foreach(var participant in table.Participants){
+                        user = await userRepository.GetUserAsync(participant.Id);
+                        response.Participants.Add(new Participant{
+                            Email = user.Email,
+                            ImgUrl = user.ImgUrl,
+                            UserName = user.UserName
+                        });
+                    }
+                }
+
+                return Results.Ok(response);
             }
             catch (Exception ex)
             {
