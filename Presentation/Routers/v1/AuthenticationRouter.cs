@@ -11,8 +11,9 @@ namespace Presentation.Routers
         {
             var group = app.MapGroup("api/v1");
             group.MapPost("/auth/login", Login);
-            group.MapPost("/auth/register", Register);
-            group.MapPost("/auth/changePassword", ChangePassword);
+            group.MapPost("/auth/account", Register);
+            group.MapPost("/auth/account/validate", AccountValidation);
+            group.MapPost("/auth/account/changePassword", ChangePassword);
         }
 
         private static async Task<IResult> Login(UserAuthenticateModel request, IUserProfileRepository repository)
@@ -25,6 +26,8 @@ namespace Presentation.Routers
                 var user = await repository.GetUserAsync(request.Email);
 
                 if (user is null) return Results.NoContent();
+
+                if (!user.IsEmailConfirmed) return Results.BadRequest("E-mail not confirmed");
 
                 if (!AuthMetods.VerifyPasswordHash(request.Password, user.PasswordHash, user.PasswordSalt))
                     return Results.BadRequest("Incorrect Password");
@@ -88,7 +91,9 @@ namespace Presentation.Routers
                     PasswordHash = passwordHash,
                     PasswordSalt = passwordSalt,
                     CreatedDate = DateTime.UtcNow,
-                    LastUpdatedDate = DateTime.UtcNow
+                    LastUpdatedDate = DateTime.UtcNow,
+                    IsEmailConfirmed = false,
+                    EmailConfirmationCode = RegisterMetods.GenerateValidationCode(5)
                 });
 
                 return Results.Ok();
@@ -96,6 +101,31 @@ namespace Presentation.Routers
             catch (Exception ex)
             {
                 throw new Exception("Error registering user: " + ex.Message);
+            }
+        }
+    
+        private static async Task<IResult> AccountValidation(UserValidationModel request, IUserProfileRepository repository)
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(request.Email) || string.IsNullOrEmpty(request.Code))
+                    return Results.BadRequest("Invalid email or code");
+                
+                var user = await repository.GetUserAsync(request.Email);
+
+                if (user is null) return Results.NoContent();
+
+                if (!user.EmailConfirmationCode.Equals(request.Code.ToUpper()))
+                    return Results.BadRequest("Invalid code");
+
+                user.IsEmailConfirmed = true;
+                await repository.UpdateAsync(user.Id, user);
+
+                return Results.Ok();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error validating account: " + ex.Message);
             }
         }
     }
