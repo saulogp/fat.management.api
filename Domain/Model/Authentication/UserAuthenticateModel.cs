@@ -1,6 +1,6 @@
 namespace Domain.Model.Authentication
 {
-    public class UserAuthenticateModel
+    public sealed class UserAuthenticateModel
     {
         public string Email { get; set; } = string.Empty;
         public string Password { get; set; } = string.Empty;

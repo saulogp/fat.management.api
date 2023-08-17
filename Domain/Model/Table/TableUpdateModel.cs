@@ -2,7 +2,7 @@ using Infrastructure.Crosscutting.Enums;
 
 namespace Domain.Model.Table
 {
-    public class TableUpdateModel
+    public sealed class TableUpdateModel
     {
         public string Title { get; set; } = string.Empty;
         public string ImgUrl { get; set; } = string.Empty;

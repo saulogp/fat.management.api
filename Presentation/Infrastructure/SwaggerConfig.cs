@@ -7,9 +7,19 @@ namespace Presentation.Infrastructure
 {
     public static class SwaggerConfig
     {
+        private const string JwtIssuerConfigKey = "Jwt:Issuer";
+        private const string JwtAudienceConfigKey = "Jwt:Audience";
+        private const string JwtKeyConfigKey = "Jwt:Key";
+        
         public static void ConfigureSwagger(this IServiceCollection services, IConfiguration configuration)
         {
-            var securityScheme = new OpenApiSecurityScheme()
+            AddSwagger(services);
+            AddJwtAuthentication(services, configuration);
+        }
+
+        private static void AddSwagger(IServiceCollection services)
+        {
+            OpenApiSecurityScheme securityScheme = new()
             {
                 Name = "Authorization",
                 Type = SecuritySchemeType.ApiKey,
@@ -19,7 +29,7 @@ namespace Presentation.Infrastructure
                 Description = "JSON Web Token based security",
             };
 
-            var securityReq = new OpenApiSecurityRequirement()
+            OpenApiSecurityRequirement securityReq = new()
             {
                 {
                     new OpenApiSecurityScheme
@@ -30,15 +40,15 @@ namespace Presentation.Infrastructure
                             Id = "Bearer"
                         }
                     },
-                    new string[] {}
+                    Array.Empty<string>()
                 }
             };
 
-            var info = new OpenApiInfo()
+            OpenApiInfo info = new()
             {
                 Version = "v1",
                 Title = "Minimal API - Find a Table - Management",
-                Description = "Minimal API - Managemente Authenticate UserProfile e Table",
+                Description = $"Minimal API - Management Authenticate UserProfile e Table - {DateTime.UtcNow.Year}",
                 TermsOfService = new Uri("http://www.example.com"),
             };
 
@@ -48,7 +58,10 @@ namespace Presentation.Infrastructure
                 o.AddSecurityDefinition("Bearer", securityScheme);
                 o.AddSecurityRequirement(securityReq);
             });
+        }
 
+        private static void AddJwtAuthentication(IServiceCollection services, IConfiguration configuration)
+        {
             services.AddAuthentication(o =>
             {
                 o.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -59,10 +72,10 @@ namespace Presentation.Infrastructure
                 o.TokenValidationParameters = new TokenValidationParameters
                 {
                     ValidateIssuer = true,
-                    ValidIssuer = configuration["Jwt:Issuer"],
+                    ValidIssuer = configuration[JwtIssuerConfigKey],
                     ValidateAudience = true,
-                    ValidAudience = configuration["Jwt:Audience"],
-                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["Jwt:Key"])),
+                    ValidAudience = configuration[JwtAudienceConfigKey],
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration[JwtKeyConfigKey] ?? string.Empty)),
                     ValidateLifetime = true,
                     ValidateIssuerSigningKey = true,
                     ClockSkew = TimeSpan.Zero

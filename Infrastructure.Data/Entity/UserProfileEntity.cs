@@ -3,8 +3,10 @@ using MongoDB.Bson.Serialization.Attributes;
 
 namespace Infrastructure.Data.Entity
 {
-    public class UserProfileEntity
+    public sealed class UserProfileEntity
     {
+        public UserProfileEntity(){}
+
         [BsonId]
         [BsonRepresentation(BsonType.String)]
         public Guid Id { get; set; }

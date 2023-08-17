@@ -2,7 +2,7 @@ using Infrastructure.Crosscutting.Enums;
 
 namespace Domain.Model.Table
 {
-    public class TableModel
+    public sealed class TableModel
     {
         public Guid Owner { get; set; }
         public string Title { get; set; } = string.Empty;

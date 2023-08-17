@@ -4,8 +4,10 @@ using MongoDB.Bson.Serialization.Attributes;
 
 namespace Infrastructure.Data.Entity
 {
-    public class TableEntity
+    public struct TableEntity
     {
+        public TableEntity(){}
+
         [BsonId]
         [BsonRepresentation(BsonType.String)]
         public Guid Id { get; set; }
@@ -24,7 +26,7 @@ namespace Infrastructure.Data.Entity
         public DateTime LastUpdatedDate { get; set; }
         public bool Active { get; set; }
         
-        public class Participant
+        public struct Participant
         {
             public Guid Id { get; set; }
             public bool Notified { get; set; }
